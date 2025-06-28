@@ -50,6 +50,7 @@ export default function TableDemo() {
 
   function handleClick(expno: string) {
     console.log("Clicked:", expno);
+    sessionStorage.clear();
     router.push(`/editor/?subject=${subject}&expno=${expno}`);
     
   }
