@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Experiment {
   subject: string;
@@ -119,8 +122,13 @@ export default function Editor() {
       {/* Theory */}
       <div className="w-full max-w-3xl mb-4 bg-red-50 p-4 rounded-md">
         <div className="font-semibold mb-2">Theory</div>
-        <div className="min-h-[3rem] bg-slate-100 p-2 rounded text-sm">
+        {/* <div className="min-h-[3rem] bg-slate-100 p-2 rounded text-sm">
           {theory ?? "Not generated yet"}
+        </div> */}
+        <div className="min-h-[3rem] bg-slate-100 p-2 rounded text-sm">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {theory}
+        </ReactMarkdown>
         </div>
         <Button
           onClick={() => generateWriteup("theory")}
