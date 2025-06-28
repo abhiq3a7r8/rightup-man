@@ -1,0 +1,313 @@
+[
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 1",
+      "description": "Study various applications of NLP and formulate the problem statement for a Mini Project based on a real-world NLP application (e.g., Machine Translation, Text Categorization, Chatbot, Sentiment Analysis, etc.)."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 2",
+      "description": "Apply text preprocessing techniques (Tokenization and Filtration) for a given Indian Regional Language text."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 3",
+      "description": "Apply stop word removal, lemmatization, and stemming for any given text."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 4",
+      "description": "Implement the N-Gram model for the given text input."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 5",
+      "description": "Study POS taggers, perform POS tagging, and apply chunking to the given text."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 6",
+      "description": "Implement a Named Entity Recognizer (NER) for the given text. Use domain-specific examples such as banking, political news, or tourism."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 7",
+      "description": "Implement a Text Similarity Recognizer (e.g., for comparing news articles) for selected documents."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 8",
+      "description": "Perform Exploratory Data Analysis on the given text and generate a Word Cloud."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 9",
+      "description": "Develop a Bag-of-Words model for Sentiment Analysis."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 10",
+      "description": "Develop a character-based or word-based Neural Language Model for text generation."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 11",
+      "description": "Submit a Mini Project Report on a chosen real-world NLP application."
+    },
+    {
+      "subject": "Natural Language Processing",
+      "expno": " 12",
+      "description": "Implement and present the Mini Project."
+    },
+    {
+        "subject": "Quantum Computing",
+        "expno": " 1",
+        "description": "Building Quantum Dice"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 2",
+        "description": "Building Quantum Random Number Generation"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 3",
+        "description": "Composing simple quantum circuits with q-gates and measuring the output into classical bits."
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 4",
+        "description": "Implementation of Shor's Algorithm"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 5",
+        "description": "Implementation of Grover's Algorithm"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 6",
+        "description": "Implementation of Deutsch's Algorithm"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 7",
+        "description": "Implementation of Deutsch-Jozsa's Algorithm"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 8",
+        "description": "Design and simulate Quantum Circuits"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 9",
+        "description": "Study and implement Qubit Gates"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 10",
+        "description": "Design and simulate Bell Circuit and GHZ Circuit"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 11",
+        "description": "Study the accuracy of Quantum Phase Estimation"
+      },
+      {
+        "subject": "Quantum Computing",
+        "expno": " 12",
+        "description": "Mini Project such as implementing an API for efficient search using Grover's Algorithm or integer factorization using Shor's Algorithm"
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 1",
+        "description": "Hadoop HDFS Practical: HDFS Basics, Hadoop Ecosystem Tools Overview, Installing Hadoop, Copying files to/from HDFS, deleting, moving and displaying files. Includes basic Hadoop programming exercises."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 2",
+        "description": "Use Sqoop tool to transfer data between Hadoop and relational database servers. Includes Sqoop installation and basic command execution."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 3",
+        "description": "Install and configure NoSQL databases like MongoDB, Cassandra, HBase, or Hypertable to execute basic NoSQL commands."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 4",
+        "description": "Hadoop MapReduce: Write and run a word count program using the MapReduce programming model."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 5",
+        "description": "Hadoop MapReduce: Implement simple algorithms such as matrix multiplication, aggregates, joins, sorting, and searching using MapReduce."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 6",
+        "description": "Create HIVE database and perform descriptive analytics including basic statistics on the data."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 7",
+        "description": "Implement any one Data Stream Algorithm using any programming language: DGIM, Bloom Filter, or Flajolet-Martin."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 8",
+        "description": "Implement an iterative algorithm such as PageRank using Apache Spark."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 9",
+        "description": "Create a Big Data analytics dashboard using Hive and Impala."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 10",
+        "description": "Design and develop a Big Data application using MLlib and Apache Spark."
+      },
+      {
+        "subject": "Big Data Analytics",
+        "expno": " 11",
+        "description": "Mini Project: Develop a real-life large data application. Examples: streaming data analysis using Flume + Hive/PySpark (e.g., Twitter/chat/web logs) or recommendation systems (e.g., healthcare, stocks, movies) or Spatio-Temporal Data Analytics."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 1",
+        "description": "Study and implement different data visualization methods."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 2",
+        "description": "Apply Linear Regression for prediction purposes and estimate the errors associated with it."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 3",
+        "description": "Identify a classification problem solvable using decision trees and evaluate its performance measures."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 4",
+        "description": "Use Support Vector Machine to solve a classification problem and evaluate performance measures."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 5",
+        "description": "Implement Ensemble Learning (Bagging or Boosting) for complex pattern recognition tasks."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 6",
+        "description": "Study and implement Multivariate Regression."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 7",
+        "description": "Use DBSCAN or K-Means clustering for an appropriate problem statement."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 8",
+        "description": "Apply PCA or SVD for dimensionality reduction."
+      },
+      {
+        "subject": "Machine Learning",
+        "expno": " 9",
+        "description": "Implement a Mini Project to solve a real-world problem in domains such as agriculture, energy, or healthcare for societal use."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 1",
+        "description": "Study Cryptography in Blockchain and implement Merkle root tree hash."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 2",
+        "description": "Create a Blockchain using Python."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 3",
+        "description": "Create a Cryptocurrency using Python for the blockchain implemented in  2."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 4",
+        "description": "Conduct a Case Study on different blockchain platforms."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 5",
+        "description": "Create Smart Contracts and perform transactions using Solidity and Remix IDE."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 6",
+        "description": "Implement an embedded wallet and perform transactions using Solidity."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 7",
+        "description": "Implement the Ethereum blockchain platform using Geth."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 8",
+        "description": "Implement the Ethereum blockchain platform using Ganache."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 9",
+        "description": "Test interoperability and cross-chain communication between blockchain platforms."
+      },
+      {
+        "subject": "Blockchain",
+        "expno": " 10",
+        "description": "Present a suitable blockchain platform that meets the requirements of the Mini Project."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 1",
+        "description": "Understand the query structure and execute various structured queries."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 2",
+        "description": "Implement any Information Retrieval (IR) modeling technique."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 3",
+        "description": "Implement a pattern matching method used in Information Retrieval."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 4",
+        "description": "Execute a query expansion technique (Local or Global)."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 5",
+        "description": "Design inverted indices for an Information Retrieval model."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 6",
+        "description": "Implement TF-IDF weighting for document scoring and retrieval."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 7",
+        "description": "Evaluate the Information Retrieval system or application under study."
+      },
+      {
+        "subject": "Information Retrieval",
+        "expno": " 8",
+        "description": "Understand a case study related to IR and generate a report."
+      }
+  ]
+  
