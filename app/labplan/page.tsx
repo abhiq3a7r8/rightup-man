@@ -1,5 +1,8 @@
 "use client";
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=//
+//Imports
+
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -25,6 +28,9 @@ import {
 } from "@/components/ui/table";
 import SubjectSelector from "@/components/subjectselector";
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=//
+// Constants and Interfaces 
+
 interface Experiment {
   subject: string;
   expno: string;
@@ -36,8 +42,10 @@ export default function TableDemo() {
   const subject = searchParams.get("sub");
   const router = useRouter();
 
-
   const [experiments, setExperiments] = useState<Experiment[]>([]);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=//
+// Load Json on page load
 
   useEffect(() => {
     fetch("/experiments.json")
@@ -48,6 +56,9 @@ export default function TableDemo() {
       });
   }, [subject]);
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=//
+// Button click functions
+
   function handleClick(expno: string) {
     console.log("Clicked:", expno);
     sessionStorage.clear();
@@ -55,11 +66,14 @@ export default function TableDemo() {
     
   }
   
-
   return (
     
     <div className="flex flex-col h-screen w-full items-center border ">
-<div className="h-10 w-auto bg-slate-100 rounded flex items-center p-8 text-3xl mt-8">{subject}</div>
+    <div className="h-10 w-auto bg-slate-100 rounded flex items-center p-8 text-3xl mt-8">{subject}</div>
+
+{/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
+{/*Drawer*/}
+
     <Drawer direction="top">
       <DrawerTrigger className="text-slate-700 rounded mb-10 mt-4 underline">
         Change Subject
@@ -69,16 +83,12 @@ export default function TableDemo() {
           <DrawerTitle>Change Subject</DrawerTitle>
           <SubjectSelector />
         </DrawerHeader>
-        <DrawerFooter>
-          
-          <DrawerClose>
-            
-          </DrawerClose>
-        </DrawerFooter>
       </DrawerContent>
     </Drawer>
+
+{/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
+{/*Table*/}
     
-      
     <Table className="w-[70%] mx-auto border border-black ">
       <TableHeader>
         <TableRow>
@@ -92,11 +102,9 @@ export default function TableDemo() {
             <TableCell className="font-medium text-center">{exp.expno}</TableCell>
             <TableCell
               onClick={() => handleClick(exp.expno)}
-              className="whitespace-normal break-words cursor-pointer hover:bg-gray-100"
-            >
+              className="whitespace-normal break-words cursor-pointer hover:bg-gray-100">
               {exp.description}
             </TableCell>
-
           </TableRow>
         ))}
       </TableBody>

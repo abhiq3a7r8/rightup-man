@@ -1,10 +1,12 @@
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
+
+
 const styles = StyleSheet.create({
   page: {
     width: 595,
     height: 842,
-    backgroundColor: "#ffffff", // Plain white A4 page
+    backgroundColor: "#ffffff", 
     padding: 0,
   },
   header: {
@@ -45,7 +47,7 @@ export default function Pdf({ aim, theory, conclusion }: any) {
         <View style={styles.header}>
           <Text style={styles.headerText}>EXPERIMENT NO.</Text>
         </View>
-
+      
         {/* Body */}
         <View style={styles.body}>
           <View style={styles.section}>
@@ -58,6 +60,7 @@ export default function Pdf({ aim, theory, conclusion }: any) {
           <View style={styles.section}>
               <Text style={styles.label}>Theory: </Text>
               <Text>{theory}</Text>
+              
           </View>
 
           <View style={styles.section}>

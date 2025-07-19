@@ -1,17 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-import Pdf from "./pdf";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
-const PDFDownloadLink = dynamic(
-  () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
-  { ssr: false }
-);
-const PDFViewer = dynamic(
-  () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
-  { ssr: false }
-);
+const generateMarkdownContent = (aim, theory, conclusion) => {
+    return `
+  <b>Aim:</b>
+  ${aim}
+  <b>hiii</b><br><br>
+  
+  <h1>Theory</h1>
+  <p>${theory}</p><br>
+  
+  <h1>Conclusion</h1>
+  <p>${conclusion}</p>
+  `;
+  };
 
 export default function Home() {
   const [aim, setAim] = useState("");
@@ -24,28 +30,39 @@ export default function Home() {
     setConclusion(sessionStorage.getItem("conclusion") || "Default conclusion text");
   }, []);
 
-  return (
-    <div className="flex flex-row h-screen items-center gap-6">
-      
-      
-      <div style={{ width: "90%", height: "100%", border: "1px solid #ccc" }}>
-        <PDFViewer width="100%" height="100%">
-          <Pdf aim={aim} theory={theory} conclusion={conclusion} />
-        </PDFViewer>
-      </div>
+  const saveAsMarkdown = () => {
+    const content = generateMarkdownContent(aim, theory, conclusion);
+    const blob = new Blob([content], { type: "text/markdown" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "writeup.md";
+    link.click();
+  };
 
-      <PDFDownloadLink
-        document={<Pdf aim={aim} theory={theory} conclusion={conclusion} />}
-        fileName="writeup.pdf"
+  const markdown = generateMarkdownContent(aim, theory, conclusion);
+
+  return (
+    <div className="flex flex-row min-h-screen items-start gap-6 bg-slate-300 overflow-auto p-4">
+      <button
+        onClick={saveAsMarkdown}
+        className="mb-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       >
-        {({ loading }) =>
-          loading ? "Generating PDF..." : (
-            <button className="bg-black text-white px-4 py-2 rounded mx-10">
-              Download PDF
-            </button>
-          )
-        }
-      </PDFDownloadLink>
+        Save as .md
+      </button>
+
+      <div
+        id="page"
+        className="prose w-[794px] h-[1123px] bg-white mx-auto p-6 overflow-y-auto shadow-lg"
+      >
+        <div className="prose font-serif">
+        <Markdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            >
+            {markdown}
+        </Markdown>
+        </div>
+      </div>
     </div>
   );
 }
